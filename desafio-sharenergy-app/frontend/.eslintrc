@@ -1,36 +1,38 @@
 {
-    "env": {
-        "browser": true,
-        "es2021": true,
-        "node": true
-    },
-    "extends": [
-        "plugin:react/recommended",
-        "airbnb",
-        "plugin:@typescript-eslint/recommended",
-        "plugin:prettier/recommended"
-    ],
-    "parser": "@typescript-eslint/parser",
-    "parserOptions": {
-        "ecmaFeatures": {
-            "jsx": true
-        },
-        "ecmaVersion": 13,
-        "sourceType": "module"
-    },
-    "plugins": [
-        "react",
-        "react-hooks",
-        "@typescript-eslint",
-        "prettier"
-    ],
-    "rules": {
-      "import/no-unresolved": "error",
-      "react/jsx-filename-extension": [ 1, {"extensions": [".tsx"]} ],
-    },
-    "settings": {
-      "import/resolver": {
-        "typescript": {}
-      }
+  "root": true,
+  "env": {
+    "browser": true,
+    "commonjs": true,
+    "es6": true,
+    "node": true,
+},
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaVersion": 11,
+    "sourceType": "module",
+  },
+  "plugins": [
+    "@typescript-eslint"
+  ],
+  "extends": [
+    "eslint:recommended",
+    /* "plugin:react/recommended", */
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:prettier/recommended",
+    "prettier"
+  ],
+  "overrides": [
+    {
+        "files": ["*.js", "*.jsx"],
+        "rules": {
+            "@TypeScript-eslint/explicit-function-return-type": "off"
+        }
     }
+],
+  "rules": {
+     "no-console": "warn",
+     "prettier/prettier": "warn",
+     "no-undefined": "off",
+  }
 }
