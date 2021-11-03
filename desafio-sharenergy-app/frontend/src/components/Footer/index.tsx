@@ -23,6 +23,10 @@ const Footer = () => {
             <span> Paulo Assis</span>
           </a>
         </p>
+        <span className="verse">
+          "Porque pela graça sois salvos, mediante a fé; e isto não vem de vós;
+          é dom de Deus;" (Efésios 2:8)
+        </span>
       </Box>
     </Box>
   );

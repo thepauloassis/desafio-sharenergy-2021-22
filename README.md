@@ -6,33 +6,34 @@ Repositório com finalidade de participação no processo seletivo da SHARENERGY
 
 ### Frontend 
 
-ReactJS
-TypeScript
-react-router-dom 
-Material-UI (MUI)
-mui-datatables
-Recharts
+* ReactJS
+* TypeScript
+* react-router-dom 
+* Material-UI (MUI)
+* mui-datatables
+* Recharts
+* Validator
 
 ### Backend
 
-NodeJS
-TypeScript
-MongoDB (mongoose)
-Express
-jsonwebtoken
-bcryptjs
-cors
-dotenv
-helmet
+* NodeJS
+* TypeScript
+* MongoDB (mongoose)
+* Express
+* jsonwebtoken
+* bcryptjs
+* cors
+* dotenv
+* helmet
 
 ### Linter
 
-eslint
-prettier
+* eslint
+* prettier
 
 ## Instalação e Execução da Aplicação
 
-A aplicação possui o frontend separado do backend, existindo 2 pastas, frontend e backend, para executar a aplicação é necessário realizar um npm i em cada uma das pastas para criar a pasta node_modules, e, posteriormente, executar os seguintes comandos em cada uma das pastas:
+A aplicação possui o frontend separado do backend, existindo 2 pastas, frontend e backend, para executar a aplicação é necessário realizar um npm install ou npm i em cada uma das pastas para criar a pasta node_modules, e, posteriormente, executar os seguintes comandos em cada uma das pastas:
 
 Frontend: npm start
 Backend: npm run dev
