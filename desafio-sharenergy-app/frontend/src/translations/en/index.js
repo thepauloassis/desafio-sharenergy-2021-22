@@ -2,6 +2,7 @@ export const TRANSLATIONS_EN =  {
   headerHome: "Home",
   headerCustomer: "Customers",
   headerLogout: "Logout",
+  selectLanguage: 'Language',
 
   //Homepage Chart
   chartName: 'Interest Variable Chart',

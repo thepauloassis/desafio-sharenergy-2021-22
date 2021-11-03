@@ -108,7 +108,7 @@ const EditCustomer = (props) => {
               autoFocus
               margin="dense"
               id="customerNumber"
-              label="Customer Number"
+              label="Número do Cliente"
               type="text"
               variant="outlined"
               value={clientNumber}
@@ -119,7 +119,7 @@ const EditCustomer = (props) => {
               required
               margin="dense"
               id="customerName"
-              label="Customer name"
+              label="Nome do Cliente"
               type="text"
               variant="outlined"
               value={clientName}
@@ -129,7 +129,7 @@ const EditCustomer = (props) => {
               sx={{ mr: 2, flex: 1 }}
               margin="dense"
               id="companyId"
-              label="Company ID"
+              label="Código do Cliente"
               type="text"
               variant="outlined"
               value={companyId}
@@ -139,7 +139,7 @@ const EditCustomer = (props) => {
               sx={{ mr: 2, flex: 1 }}
               margin="dense"
               id="email"
-              label="Customer Email"
+              label="E-mail"
               type="text"
               variant="outlined"
               value={email}
@@ -149,7 +149,7 @@ const EditCustomer = (props) => {
               sx={{ mr: 2, flex: 1 }}
               margin="dense"
               id="phoneNumber"
-              label="Customer phone number"
+              label="Telefone"
               type="text"
               variant="outlined"
               value={phoneNumber}
@@ -159,7 +159,7 @@ const EditCustomer = (props) => {
               sx={{ mr: 2, flex: 1 }}
               margin="dense"
               id="address"
-              label="Address"
+              label="Endereço"
               type="text"
               variant="outlined"
               value={address}
@@ -169,7 +169,7 @@ const EditCustomer = (props) => {
               sx={{ mr: 2, flex: 1 }}
               margin="dense"
               id="observation"
-              label="Observation"
+              label="Observações"
               type="text"
               variant="outlined"
               value={observation}
@@ -180,7 +180,7 @@ const EditCustomer = (props) => {
               sx={{ mr: 2, flex: 1 }}
               margin="dense"
               id="factoryId"
-              label="Factory ID"
+              label="ID da Usina"
               type="text"
               variant="outlined"
               value={factoryId}
@@ -191,7 +191,7 @@ const EditCustomer = (props) => {
               sx={{ mr: 2, flex: 1 }}
               margin="dense"
               id="participationPercentage"
-              label="Participation Percentage"
+              label="Percentual de Participação"
               type="text"
               variant="outlined"
               value={participationPercentage}
@@ -205,7 +205,7 @@ const EditCustomer = (props) => {
             variant="outlined"
             onClick={handleEditDialog}
           >
-            Cancel
+            Cancelar
           </Button>
           <Button
             aria-label="Edit"
@@ -214,7 +214,7 @@ const EditCustomer = (props) => {
             autoFocus
             color="success"
           >
-            Edit
+            Editar
           </Button>
         </DialogActions>
       </Dialog>

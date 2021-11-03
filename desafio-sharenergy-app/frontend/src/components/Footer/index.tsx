@@ -18,7 +18,7 @@ const Footer = () => {
       >
         <span>Desafio Sharenergy 2021-22</span>
         <p>
-          Desenvolvidor por:
+          Desenvolvido por:
           <a href="https://github.com/thepauloassis" target="_blank">
             <span> Paulo Assis</span>
           </a>

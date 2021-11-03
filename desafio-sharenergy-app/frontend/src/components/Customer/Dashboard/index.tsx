@@ -20,7 +20,7 @@ const CustomerDashboard = () => {
           alignItems: 'center',
         }}
       >
-        <Box
+        {/* <Box
           component="div"
           mt={5}
           sx={{
@@ -33,7 +33,7 @@ const CustomerDashboard = () => {
           <CustomerCard />
           <CustomerCard />
           <CustomerCard />
-        </Box>
+        </Box> */}
         <Box>
           <Box mt={5} sx={{ width: '100%', height: 300 }}>
             <CustomerTable />

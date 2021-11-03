@@ -3,6 +3,8 @@ import './style.css';
 
 import { useTranslation } from 'react-i18next';
 
+import validator from 'validator';
+
 import axios from '../../../services/axios';
 
 import TextField from '@mui/material/TextField';
@@ -52,6 +54,7 @@ const FormRegisterCustomer = (props): JSX.Element => {
 
   const handleCustomerSubmit = async (e) => {
     e.preventDefault();
+    let formErrors = false;
 
     const client = {
       clientNumber: clientNumber,
@@ -66,6 +69,43 @@ const FormRegisterCustomer = (props): JSX.Element => {
         participationPercentage: participationPercentage,
       },
     };
+
+    if (clientNumber === '') {
+      toast.error('Número do Cliente é obrigatório!');
+      formErrors = true;
+    }
+
+    if (clientName === '') {
+      toast.error('Nome do Cliente é obrigatório!');
+      formErrors = true;
+    }
+
+    if (email === '') {
+      toast.error('E-mail é obrigatório!');
+      formErrors = true;
+    }
+
+    if (factoryId === '') {
+      toast.error('ID da Usina é obrigatório!');
+      formErrors = true;
+    }
+
+    if (participationPercentage === '') {
+      toast.error('Percentual de Participação é obrigatório!');
+      formErrors = true;
+    }
+
+    if (clientName.length < 3 || clientName.length > 255) {
+      toast.error('Nome precisa ter entre 3 e 255 caracteres');
+      formErrors = true;
+    }
+
+    if (!validator.isEmail(email)) {
+      toast.error('E-mail inválido');
+      formErrors = true;
+    }
+
+    if (formErrors) return;
 
     try {
       await axios.post(`/clients`, client);
@@ -116,10 +156,10 @@ const FormRegisterCustomer = (props): JSX.Element => {
               <CloseIcon />
             </IconButton>
             <Typography sx={{ ml: 2, flex: 1 }} variant="h6" component="div">
-              Register Customer
+              Cadastrar Cliente
             </Typography>
             <Button autoFocus color="inherit" onClick={handleCustomerSubmit}>
-              save
+              Salvar
             </Button>
           </Toolbar>
         </AppBar>
@@ -144,9 +184,9 @@ const FormRegisterCustomer = (props): JSX.Element => {
                 sx={{ mr: 2, flex: 1 }}
                 required
                 autoFocus
-                margin="dense"
+                margin="normal"
                 id="customerNumber"
-                label="Customer Number"
+                label="Número do Cliente"
                 type="text"
                 variant="outlined"
                 value={clientNumber}
@@ -157,7 +197,7 @@ const FormRegisterCustomer = (props): JSX.Element => {
                 required
                 margin="dense"
                 id="customerName"
-                label="Customer name"
+                label="Nome do Cliente"
                 type="text"
                 variant="outlined"
                 value={clientName}
@@ -167,20 +207,20 @@ const FormRegisterCustomer = (props): JSX.Element => {
                 sx={{ mr: 2, flex: 1 }}
                 margin="dense"
                 id="companyId"
-                label="Company ID"
+                label="Código do Cliente"
                 type="text"
                 variant="outlined"
                 value={companyId}
                 onChange={(e) => setCompanyId(e.target.value)}
               />
               <TextField
+                required
                 sx={{ mr: 2, flex: 1 }}
                 margin="dense"
                 id="email"
-                label="Customer Email"
+                label="E-mail"
                 type="email"
                 variant="outlined"
-                errorText="E-mail inválido"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
               />
@@ -188,7 +228,7 @@ const FormRegisterCustomer = (props): JSX.Element => {
                 sx={{ mr: 2, flex: 1 }}
                 margin="dense"
                 id="phoneNumber"
-                label="Customer phone number"
+                label="Telefone"
                 type="text"
                 variant="outlined"
                 value={phoneNumber}
@@ -198,7 +238,7 @@ const FormRegisterCustomer = (props): JSX.Element => {
                 sx={{ mr: 2, flex: 1 }}
                 margin="dense"
                 id="address"
-                label="Address"
+                label="Endereço"
                 type="text"
                 variant="outlined"
                 value={address}
@@ -208,7 +248,7 @@ const FormRegisterCustomer = (props): JSX.Element => {
                 sx={{ mr: 2, flex: 1 }}
                 margin="dense"
                 id="observation"
-                label="Observation"
+                label="Observações"
                 type="text"
                 variant="outlined"
                 value={observation}
@@ -219,7 +259,7 @@ const FormRegisterCustomer = (props): JSX.Element => {
                 sx={{ mr: 2, flex: 1 }}
                 margin="dense"
                 id="factoryId"
-                label="Factory ID"
+                label="ID da Usina"
                 type="text"
                 variant="outlined"
                 value={factoryId}
@@ -230,7 +270,7 @@ const FormRegisterCustomer = (props): JSX.Element => {
                 sx={{ mr: 2, flex: 1 }}
                 margin="dense"
                 id="participationPercentage"
-                label="Participation Percentage"
+                label="Percentual de Participação"
                 type="text"
                 variant="outlined"
                 value={participationPercentage}

@@ -3,36 +3,16 @@ import './style.css';
 
 import { useTranslation } from 'react-i18next';
 
-import axios from '../../services/axios';
 import data from '../../data/dadosUsina.json';
 
 import LineChartComponent from './LineChart';
 import ChartSelectVariable from './ChartSelectVariable';
 import ChartInfo from './ChartInfo';
-import FormUpload from '../FormUpload';
 
 import { calculateChartInfo } from '../../utils/chartCalculateInfo';
 
-import {
-  LineChart,
-  ResponsiveContainer,
-  Legend,
-  Tooltip,
-  Line,
-  XAxis,
-  YAxis,
-  CartesianGrid,
-} from 'recharts';
-
 import Box from '@mui/material/Box';
 import Paper from '@mui/material/Paper';
-
-import { styled, useTheme } from '@mui/material/styles';
-
-/* function componentDidMount() {
-  throw new Error('Function not implemented.');
-  console.log(1);
-} */
 
 interface IData {
   tempo_h: number;
@@ -44,7 +24,6 @@ interface IData {
 
 const Chart = () => {
   const [t, i18n] = useTranslation();
-  const theme = useTheme();
   const [variable, setVariable] = useState('tensao_V');
   const [lineColor, setLineColor] = useState(`blue`);
   const [radioColor, setRadioColor] = useState('info');
@@ -77,7 +56,7 @@ const Chart = () => {
     setVariable(chartVariable);
   };
 
-  const handleSelect = (e: any) => {
+  const handleSelect = (e: Event) => {
     handleChart(data, e.target.value);
     if (e.target.value === 'tensao_V') {
       setLineColor(`blue`);
@@ -128,11 +107,7 @@ const Chart = () => {
             </Box>
           </Box>
         </Paper>
-        <FormUpload />
       </Box>
-      {/* <Button color="mycolors" variant="contained">
-        {theme.palette.mycolors.main}
-      </Button> */}
     </>
   );
 };

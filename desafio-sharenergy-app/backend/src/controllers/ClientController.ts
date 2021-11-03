@@ -24,9 +24,9 @@ class ClientController {
   async create(req: Request, res: Response) {
     const client = new Client(req.body);
 
-    if (!validator.isEmail(req.body.email)) {
+    /* if (!validator.isEmail(req.body.email)) {
       return res.status(400).json({ message: 'Invalid e-mail' });
-    }
+    } */
 
     await client
       .save()

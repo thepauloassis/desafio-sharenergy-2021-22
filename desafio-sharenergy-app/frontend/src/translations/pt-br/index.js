@@ -3,6 +3,7 @@ export const TRANSLATIONS_PT_BR =  {
   headerHome: 'Início',
   headerCustomer: 'Clientes',
   headerLogout: 'Sair',
+  selectLanguage: 'Idioma',
 
   //Homepage Chart
   chartName: 'Gráfico de Variável de Interesse',

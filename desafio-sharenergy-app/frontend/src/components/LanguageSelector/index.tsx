@@ -22,7 +22,7 @@ const LanguageSelector = () => {
     <>
       <Box mr={5} sx={{ width: 80 }}>
         <FormControl variant="standard" fullWidth>
-          <InputLabel id="languageSelect">Language</InputLabel>
+          <InputLabel id="languageSelect">{t('selectLanguage')}</InputLabel>
           <Select
             labelId="languageSelect"
             id="languageSelect"

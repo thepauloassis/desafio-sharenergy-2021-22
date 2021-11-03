@@ -65,11 +65,11 @@ const DeleteCustomer = (props) => {
         aria-describedby="alert-dialog-description"
       >
         <DialogTitle id="alert-dialog-title">
-          {'Are you really sure you want to delete this register?'}
+          {'Deseja realmente excluir o registro selecionado?'}
         </DialogTitle>
         <DialogContent>
           <DialogContentText id="alert-dialog-description">
-            This action will delete the specified customer and cannot be undone.
+            A ação irá excluir o cliente especificado e não poderá ser desfeita.
           </DialogContentText>
         </DialogContent>
         <DialogActions>
@@ -78,7 +78,7 @@ const DeleteCustomer = (props) => {
             variant="outlined"
             onClick={handleDeleteDialog}
           >
-            Cancel
+            Cancelar
           </Button>
           <Button
             aria-label="Delete"
@@ -87,7 +87,7 @@ const DeleteCustomer = (props) => {
             autoFocus
             color="error"
           >
-            Delete
+            Deletar
           </Button>
         </DialogActions>
       </Dialog>
