@@ -35,9 +35,11 @@ Repositório com finalidade de participação no processo seletivo da SHARENERGY
 
 A aplicação possui o frontend separado do backend, existindo 2 pastas, frontend e backend, para executar a aplicação é necessário realizar um npm install ou npm i em cada uma das pastas para criar a pasta node_modules, e, posteriormente, executar os seguintes comandos em cada uma das pastas:
 
-Frontend: npm start
-Backend: npm run dev
+* Frontend: npm start
+* Backend: npm start
 
-Além disso, o arquivo .env foi enviado juntamente ao repositório, a fim de proporcionar agilidade na execução da aplicação, pois não é recomendado, além de ser uma falha de segurança, que tal arquivo seja enviado para o repositório.
+Vídeo no Youtube sobre o desafio: [YouTube](https://youtu.be/NedeuycC0wo)
 
-Vídeo no Youtube sobre o desafio: [YouTube](https://pt-br.reactjs.org/)
+### Sobre o arquivo .ENV
+
+Para realizar a execução do backend é necessário um arquivo ".env" na raiz da aplicação com as informações de conexão com o banco de dados, porém, enviar tal arquivo para o Github é um feito não recomendado, pois é uma falha de segurança, mas para fins de demostração da aplicação, o arquivo foi enviado juntamente com os demais para o Github, sendo o banco de dados específico para o desafio.

@@ -3,7 +3,6 @@ import './style.css';
 
 import Box from '@mui/material/Box';
 
-import CustomerCard from '../../Card';
 import CustomerTable from '../Datatable';
 
 const CustomerDashboard = () => {
@@ -20,20 +19,6 @@ const CustomerDashboard = () => {
           alignItems: 'center',
         }}
       >
-        {/* <Box
-          component="div"
-          mt={5}
-          sx={{
-            width: '100%',
-            display: 'flex',
-            justifyContent: 'space-between',
-          }}
-        >
-          <CustomerCard cardTitle={'Total de Clientes'} cardContent={100} />
-          <CustomerCard />
-          <CustomerCard />
-          <CustomerCard />
-        </Box> */}
         <Box>
           <Box mt={5} sx={{ width: '100%', height: 300 }}>
             <CustomerTable />

@@ -117,6 +117,8 @@ const Login = () => {
             >
               Entrar
             </Button>
+            <Typography component="h4">E-mail: admin@sharenergy.com</Typography>
+            <Typography component="h4">Senha: Sharenergy#000</Typography>
           </Box>
         </Box>
         <Copyright sx={{ mt: 8, mb: 4 }} />

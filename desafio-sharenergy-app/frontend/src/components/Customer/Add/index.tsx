@@ -111,7 +111,18 @@ const FormRegisterCustomer = (props): JSX.Element => {
       await axios.post(`/clients`, client);
 
       props.refresh();
-      toast.success('Customer successfully registered!');
+      toast.success('Cliente cadastrado com sucesso!');
+
+      setClientNumber('');
+      setClientName('');
+      setCompanyId('');
+      setEmail('');
+      setPhoneNumber('');
+      setAddress('');
+      setObservation('');
+      setFactoryId('');
+      setParticipationPercentage('');
+
       setRegisterDialog(false);
     } catch (err) {
       console.log(err.response.data.message);

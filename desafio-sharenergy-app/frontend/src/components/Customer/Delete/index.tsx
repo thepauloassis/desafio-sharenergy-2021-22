@@ -39,7 +39,7 @@ const DeleteCustomer = (props) => {
   const handleConfirmDelete = async (e: Event) => {
     try {
       await axios.delete(`/clients/${customerDeleteId}`);
-      toast.success('Customer successfully deleted!');
+      toast.success('Cliente excluído com sucesso!');
       props.refresh();
     } catch (err) {
       console.log(err);

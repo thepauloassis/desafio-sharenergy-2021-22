@@ -78,7 +78,7 @@ const EditCustomer = (props) => {
     });
 
     props.refresh();
-    toast.success('Customer successfully edited!');
+    toast.success('Cliente editado com sucesso!');
     setEditDialog(!editDialog);
   };
 

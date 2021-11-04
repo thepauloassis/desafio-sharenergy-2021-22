@@ -6,7 +6,6 @@ import Route from './Route';
 import Home from '../pages/Home';
 import CustomerHome from '../components/Customer/';
 import Login from '../pages/Login';
-import RegisterAccount from '../pages/Register';
 import Page404 from '../pages/Page404';
 
 const Routes = () => {
@@ -15,7 +14,6 @@ const Routes = () => {
       <Route exact path="/" component={Login} />
       <Route exact path="/home" component={Home} isPrivate />
       <Route exact path="/customer" component={CustomerHome} isPrivate />
-      <Route exact path="/register" component={RegisterAccount} />
       <Route path="*" component={Page404} />
     </Switch>
   );
