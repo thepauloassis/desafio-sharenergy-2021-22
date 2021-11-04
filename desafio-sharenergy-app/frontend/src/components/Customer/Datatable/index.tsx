@@ -20,19 +20,17 @@ const CustomerTable = () => {
   const [t, i18n] = useTranslation();
   const [clients, setClients] = useState([] as any);
   const [refreshPage, setRefreshPage] = useState(false);
-  const [token, setToken] = useState();
-
-  //CustomerData
-  const [customersData, setCustomersData] = useState('');
-  const [totalCustomers, setTotalCustomers] = useState('');
-  const [totalLucro, setTotalLucro] = useState('');
 
   useEffect(() => {
     const getData = async () => {
-      await axios.get(`/clients`).then((res) => {
-        setClients(res.data);
-      });
-      console.log(clients);
+      await axios
+        .get(`/clients`)
+        .then((res) => {
+          setClients(res.data);
+        })
+        .catch((err) => {
+          console.log(err);
+        });
     };
 
     getData();

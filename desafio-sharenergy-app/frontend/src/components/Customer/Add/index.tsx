@@ -125,7 +125,6 @@ const FormRegisterCustomer = (props): JSX.Element => {
 
       setRegisterDialog(false);
     } catch (err) {
-      console.log(err.response.data.message);
       toast.error(err.response.data.message);
     }
   };

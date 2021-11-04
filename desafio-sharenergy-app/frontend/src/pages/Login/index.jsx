@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useState } from 'react';
+import React from 'react';
 import { useHistory } from 'react-router-dom';
 
 import axios from '../../services/axios';
@@ -7,10 +7,7 @@ import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import CssBaseline from '@mui/material/CssBaseline';
 import TextField from '@mui/material/TextField';
-import FormControlLabel from '@mui/material/FormControlLabel';
-import Checkbox from '@mui/material/Checkbox';
 import Link from '@mui/material/Link';
-import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
 import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import Typography from '@mui/material/Typography';
@@ -38,7 +35,6 @@ function Copyright(props: any) {
 const theme = createTheme();
 
 const Login = () => {
-  const [token, setToken] = useState();
   const history = useHistory();
 
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
@@ -53,13 +49,10 @@ const Login = () => {
       password,
     });
 
-    console.log(loginAuth.data.user.email);
-
     if (!loginAuth.data.user.email) {
       return 'error';
     }
 
-    setToken(loginAuth.data.token);
     localStorage.setItem('DesafioSharenergy:JWT_TOKEN', loginAuth.data.token);
     history.push('/home');
   };
