@@ -45,6 +45,6 @@ Vídeo no Youtube sobre o desafio: [YouTube](https://youtu.be/NedeuycC0wo)
 Para realizar a execução do backend é necessário um arquivo ".env" na raiz da aplicação com as informações de conexão com o banco de dados, porém, enviar tal arquivo para o Github é um feito não recomendado, pois é uma falha de segurança, mas para fins de demostração da aplicação, o arquivo foi enviado juntamente com os demais para o Github, sendo o banco de dados específico para o desafio.
 
 #
-Porque pela graça sois salvos, mediante a fé; e isto não vem de vós; é dom de Deus;
+"Porque pela graça sois salvos, mediante a fé; e isto não vem de vós; é dom de Deus;"
 
 Efésios 2:8
